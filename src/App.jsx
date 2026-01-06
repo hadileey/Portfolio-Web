@@ -1,44 +1,61 @@
-import {
-  BrowserRouter,
-  Link,
-  NavLink, 
-  Route,
-  Routes,
-} from "react-router-dom";
-import Portfolio from "./pages/portfolio"; 
+import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
+import Portfolio from "./pages/portfolio";
+import Projects from "./pages/Projects";
 
+import { useState } from "react";
 
 function Navigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="portfolio-header">
+    <nav className="portfolio-header" style={{ marginTop: "10px" }}>
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
+        <Link
+          to="/"
+          className="nav-logo"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onClick={() => setMenuOpen(false)}
+        >
+          <img
+            src="https://img.icons8.com/3d-fluency/94/source-code.png"
+            alt=""
+            style={{ width: "30px" }}
+          />
           <span className="linear">Hadil</span>
           <span>kk</span>
         </Link>
 
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => (isActive ? "active" : "")}
-              end
-            >
+            <NavLink to="/" end onClick={() => setMenuOpen(false)}>
               Portfolio
             </NavLink>
           </li>
           <li>
-            <NavLink 
-              to="/projects" 
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
+            <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
               Projects
             </NavLink>
           </li>
         </ul>
 
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
+        >
+          ☰
+        </button>
+
         <div className="nav-cta">
-          <a href="mailto:hadilkk63@gmail.com" className="contact-btn">
+          <a
+            href="mailto:hadilkk63@gmail.com"
+            className="btn2"
+            style={{ paddingLeft: "20px", paddingRight: "20px" }}
+          >
             Hire Me
           </a>
         </div>
@@ -54,7 +71,6 @@ function App() {
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
         rel="stylesheet"
       />
-      
 
       <BrowserRouter>
         <Navigation />
@@ -62,6 +78,7 @@ function App() {
         <div className="page-content">
           <Routes>
             <Route path="/" element={<Portfolio />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
       </BrowserRouter>
@@ -78,17 +95,12 @@ function App() {
           color: #ffffff;
           font-family: 'Plus Jakarta Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
-          cursor: none; /* OPTIONAL: Hides the default arrow cursor for full immersion */
         }
         
-        /* If you hide the cursor above, make sure links still show a pointer or style the butterfly */
         a, button {
            cursor: pointer; 
         }
 
-        /* ... REST OF YOUR CSS ... */
-        
-        /* --- PORTFOLIO HEADER --- */
         .portfolio-header {
           position: fixed;
           top: 20px;
@@ -184,7 +196,56 @@ function App() {
           .portfolio-header { width: 95%; padding: 0 20px; }
           .nav-logo { font-size: 1.1rem; }
         }
-      `}</style>
+        .menu-toggle {
+          display: none;
+          background: none;
+          border: none;
+          color: white;
+          font-size: 1.6rem;
+        }
+
+        @media (max-width: 768px) {
+          .menu-toggle {
+            display: block;
+          }
+          :root {
+            --bg-color: #050505;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-blue: #007AFF;
+            --accent-cyan: #5AC8FA;
+            --text-main: #ffffff;
+            --text-dim: #a1a1a1;
+          }
+
+          .nav-links {
+            position: fixed;  
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: #000000ff;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            z-index:999;
+            padding: 20px 0;
+            display: none;
+          }
+
+          .nav-links.open {
+            display: flex;
+          }
+
+          .nav-cta {
+            display: none;
+          }
+        }
+     `}</style>
     </>
   );
 }
