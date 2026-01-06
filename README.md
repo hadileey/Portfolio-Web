@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Hadil — Portfolio Website
+# 🧑🏻‍💻 Hadil — Portfolio Website
 
 A **modern, glassmorphic, high-performance developer portfolio** built with **React** to showcase skills, projects, and professional identity with a premium UI experience.
 
