@@ -4,7 +4,7 @@
 
 A **modern, glassmorphic, high-performance developer portfolio** built with **React** to showcase skills, projects, and professional identity with a premium UI experience.
 
-<a href="https://hadil-kk.netlify.app/">🌐 Live Demo</a> • [💼 GitHub](https://github.com/nxt-stark) • [🔗 LinkedIn](https://linkedin.com/in/hadil-ibrahim)
+<a href="https://hadileey.netlify.app/">🌐 Live Demo</a> • [💼 GitHub](https://github.com/nxt-stark) • [🔗 LinkedIn](https://linkedin.com/in/hadil-ibrahim)
 
 </div>
 
