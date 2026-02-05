@@ -564,7 +564,7 @@ const Portfolio = () => {
               </div>
               <div className="stack-preview">
                 <p>Resume</p>
-                <button className="btn2">
+                <button className="btn2" onClick={() => { window.location.href = "https://drive.google.com/uc?export=download&id=1usJKcDkJWIS-nrIvoFrv1B3RsUoKLqNU"; }} >
                   Download My Resume{" "}
                   <svg
                     viewBox="0 0 24 24"
