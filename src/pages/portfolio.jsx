@@ -290,7 +290,7 @@ const Portfolio = () => {
                   Contact
                 </a>
                 <a
-                  href="https://linkedin.com/in/hadil-ibrahim"
+                  href="https://linkedin.com/in/hadileey"
                   className="btn"
                   target="_blank"
                   rel="noreferrer"
@@ -1085,7 +1085,7 @@ const Portfolio = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com/in/hadil-ibrahim"
+                    href="https://linkedin.com/in/hadileey"
                     target="_blank"
                     rel="noreferrer"
                     className="btn"
