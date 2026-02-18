@@ -4,7 +4,7 @@
 
 A **modern, glassmorphic, high-performance developer portfolio** built with **React** to showcase skills, projects, and professional identity with a premium UI experience.
 
-<a href="https://hadileey.netlify.app/">🌐 Live Demo</a> • [💼 GitHub](https://github.com/nxt-stark) • [🔗 LinkedIn](https://linkedin.com/in/hadileey)
+• [💼 GitHub](https://github.com/nxt-stark) • [🔗 LinkedIn](https://linkedin.com/in/hadileey) • [🌍 Portfolio](https://hadileey.vercel.app/)
 
 </div>
 
@@ -77,8 +77,9 @@ npm run dev
 **Hadil K K**  
 Full-Stack Developer (MERN + Flutter)  
 
+- Portfolio: https://hadileey.vercel.app/
 - GitHub: https://github.com/nxt-stark  
-- LinkedIn: https://linkedin.com/in/hadil-ibrahim  
+- LinkedIn: https://linkedin.com/in/hadilleey
 - Email: hadilkk63@gmail.com  
 
 ---
